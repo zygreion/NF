@@ -15,10 +15,10 @@ export default function Header() {
         to="/"
         className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
       >
-        <span className="fs-4">Zumi</span>
+        <span className="fs-4">Group Cat FWD2</span>
       </Link>
 
-      <ul className="nav nav-pills">
+      <ul className="nav nav-pills gap-2">
         {navLinks.map((link) => {
           const isActive =
             link.href === "/"
