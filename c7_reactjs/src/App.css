@@ -1,0 +1,4 @@
+.shadow-sm:hover {
+  cursor: pointer;
+  box-shadow: var(--bs-box-shadow) !important;
+}
