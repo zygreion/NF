@@ -9,17 +9,15 @@ class BookController extends Controller
 {
     public function index()
     {
-        $data = new Book(); // membuat object
-        $books = $data->getBooks(); // mengakses method getBooks
+        $books = Book::with(['genre', 'author'])->get();
 
-        return view('books', ['books' => $books]); // mengirim data buku ke view
+        return view('books', compact('books', 'books')); // mengirim data buku ke view
     }
 
     public function show($id)
     {
-        $data = new Book();
-        $book = $data->getBookById($id);
+        $book = Book::find($id);
 
-        return view('books.id', ['id' => $id, 'book' => $book]);
+        return view('books.id', compact('id', 'book'));
     }
 }

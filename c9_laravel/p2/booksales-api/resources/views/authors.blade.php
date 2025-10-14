@@ -12,10 +12,10 @@
 
     @foreach ($authors as $author)
         <ul>
-            <li>{{$author['id']}}</li>
-            <li>{{$author['name']}}</li>
-            <li>{{$author['nationality']}}</li>
-            <li>{{$author['birthdate']}}</li>
+            <li>ID: {{$author['id']}}</li>
+            <li>Name:  {{$author['name']}}</li>
+            <li>Nationality: {{$author['nationality']}}</li>
+            <li>Birthdate: {{$author['birthdate']}}</li>
         </ul>
     @endforeach
 </body>

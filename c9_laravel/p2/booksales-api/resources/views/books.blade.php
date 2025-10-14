@@ -12,10 +12,13 @@
 
     @foreach ($books as $book)
         <ul>
-            <li>{{$book['title']}}</li>
-            <li>{{$book['description']}}</li>
-            <li>{{$book['price']}}</li>
-            <li>{{$book['stock']}}</li>
+            <li>ID: {{$book->id}}</li>
+            <li>Title: {{$book->title}}</li>
+            <li>Description: {{$book->description}}</li>
+            <li>Genre: {{$book->genre->name}}</li>
+            <li>Author: {{$book->author->name}}</li>
+            <li>Price: {{$book->price}}</li>
+            <li>Stock: {{$book->stock}}</li>
         </ul>
     @endforeach
 </body>

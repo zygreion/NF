@@ -12,9 +12,9 @@
 
     @foreach ($genres as $genre)
         <ul>
-            <li>{{$genre['id']}}</li>
-            <li>{{$genre['name']}}</li>
-            <li>{{$genre['description']}}</li>
+            <li>ID: {{$genre['id']}}</li>
+            <li>Name: {{$genre['name']}}</li>
+            <li>Description: {{$genre['description']}}</li>
         </ul>
     @endforeach
 </body>
