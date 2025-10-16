@@ -15,32 +15,32 @@ class AuthorSeeder extends Seeder
     {
         Author::create([
             'name' => 'Andrea Hirata',
-            'nationality' => 'Indonesia',
-            'birthdate' => '1967-10-24'
+            'photo' => 'andrea.jpg',
+            'bio' => 'Penulis asal Bangka Belitung'
         ]);
 
         Author::create([
             'name' => 'Tere Liye',
-            'nationality' => 'Indonesia',
-            'birthdate' => '1979-05-21'
+            'photo' => 'tere.jpg',
+            'bio' => 'Penulis novel series Bumi Langit'
         ]);
 
         Author::create([
             'name' => 'J.K. Rowling',
-            'nationality' => 'United Kingdom',
-            'birthdate' => '1965-07-31'
+            'photo' => 'jk_rowling.jpg',
+            'bio' => 'Penulis fiksi dengan karyanya terkenal, Harry Potter'
         ]);
 
         Author::create([
             'name' => 'Stephen King',
-            'nationality' => 'United States',
-            'birthdate' => '1947-09-21'
+            'photo' => 'stephen.jpg',
+            'bio' => 'Seorang astrofisika asal Amerika Serikat'
         ]);
 
         Author::create([
             'name' => 'Raditya Dika',
-            'nationality' => 'Indonesia',
-            'birthdate' => '1984-12-28'
+            'photo' => 'raditya.jpg',
+            'bio' => 'Penulis dan komika asli Indonesia'
         ]);
     }
 }

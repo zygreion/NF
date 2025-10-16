@@ -14,8 +14,8 @@
         <ul>
             <li>{{$author['id']}}</li>
             <li>{{$author['name']}}</li>
-            <li>{{$author['nationality']}}</li>
-            <li>{{$author['birthdate']}}</li>
+            <li>{{$author['photo']}}</li>
+            <li>{{$author['bio']}}</li>
         </ul>
     @endforeach
 </body>

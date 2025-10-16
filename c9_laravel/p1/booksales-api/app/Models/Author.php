@@ -10,32 +10,32 @@ class Author extends Model
         [
             'id' => 1,
             'name' => 'Saya Sendiri',
-            'nationality' => 'Jepang',
-            'birthdate' => '26/06/2000',
+            'photo' => 'saya.jpg',
+            'bio' => 'Adalah saya sendiri bukan orang lain',
         ],
         [
             'id' => 2,
             'name' => 'Andrea Hirata',
-            'nationality' => 'Indonesia',
-            'birthdate' => '13/11/1995',
+            'photo' => 'andrea.jpg',
+            'bio' => 'Penulis asal Bangka Belitung',
         ],
         [
             'id' => 3,
             'name' => 'Stephen Hawking',
-            'nationality' => 'Amerika',
-            'birthdate' => '09/01/1965',
+            'photo' => 'stephen.jpg',
+            'bio' => 'Seorang astrofisika asal Amerika Serikat',
         ],
         [
             'id' => 4,
             'name' => 'Uvuvwevwe Ossas',
-            'nationality' => 'Afrika Selatan',
-            'birthdate' => '19/08/1982',
+            'photo' => 'ossas.jpg',
+            'bio' => 'Penulis terkenal dari Afrika Selatan',
         ],
         [
             'id' => 5,
             'name' => 'Upin',
-            'nationality' => 'Malaysia',
-            'birthdate' => '30/06/2007',
+            'photo' => 'upin.jpg',
+            'bio' => 'Upin inilah dia',
         ],
     ];
 
