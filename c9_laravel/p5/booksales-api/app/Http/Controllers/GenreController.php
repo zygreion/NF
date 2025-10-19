@@ -27,6 +27,25 @@ class GenreController extends Controller
         // return view('genres', ['genres' => $genres]);
     }
 
+    public function show($id)
+    {
+        $genre = Genre::find($id);
+
+        if (!$genre) {
+            return response()->json([
+                'success' => false,
+                'message' => "Genre with id $id not found!",
+            ], 404);
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => "get genre by id $id",
+            'data' => $genre
+        ], 200);
+        // return view('genres.id', compact('id', 'genre'));
+    }
+
     public function store(Request $request)
     {
         // 1. validator
@@ -55,5 +74,67 @@ class GenreController extends Controller
             'message' => 'Genre added succesfully',
             'data' => $genre,
         ], 201);
+    }
+
+
+
+    public function update($id, Request $request)
+    {
+        // 1. mencari data
+        $genre = Genre::find($id);
+
+        if (!$genre) {
+            return response()->json([
+                'success' => false,
+                'message' => "Genre with id $id not found!",
+            ], 404);
+        }
+
+        // 2. validator
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:50',
+            'description' => 'required|string',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'message' => $validator->errors(),
+            ], 422);
+        }
+
+        // 3. siapkan data yang ingin diupdate
+        $data = [
+            'name' => $request->name,
+            'description' => $request->description,
+        ];
+
+        // 4. update data baru ke database
+        $genre->update($data);
+
+        return response()->json([
+            'success' => true,
+            'message' => "Genre updated succesfully",
+            'data' => $genre,
+        ], 200);
+    }
+
+    public function destroy($id)
+    {
+        $genre = Genre::find($id);
+
+        if (!$genre) {
+            return response()->json([
+                'success' => false,
+                'message' => "Genre with id $id not found!",
+            ], 404);
+        }
+
+        $genre->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => "Genre deleted succesfully",
+        ], 200);
     }
 }
